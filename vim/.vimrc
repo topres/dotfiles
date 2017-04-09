@@ -22,7 +22,6 @@ colorscheme PaperColor
 set t_Co=256
 set number
 set numberwidth=3
-set relativenumber
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 
 set hidden
