@@ -1,5 +1,9 @@
 # todo - add aliases etc.
 #alias repos="cd ~/Repos"
 
-export PATH=$PATH:/usr/local/go/bin
+PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/languages/go
+
+PATH=$PATH:$GOPATH/bin
+
+export PATH
