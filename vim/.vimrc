@@ -12,6 +12,7 @@ source $HOME/dotfiles/vim/config/ctrlp.vim
 source $HOME/dotfiles/vim/config/airlines.vim
 source $HOME/dotfiles/vim/config/mappings.vim
 source $HOME/dotfiles/vim/config/syntastic.vim
+source $HOME/dotfiles/vim/config/nerdtree.vim
 
 filetype plugin indent on
 
