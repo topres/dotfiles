@@ -12,7 +12,7 @@ call plug#begin()
     Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
     Plug 'easymotion/vim-easymotion'
-
+    Plug 'tpope/vim-surround'
 
     " languages etc
     Plug 'elzr/vim-json'
