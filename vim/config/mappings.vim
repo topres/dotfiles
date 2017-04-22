@@ -6,8 +6,10 @@ nnoremap j gj
 nnoremap k gk
 cnoremap w!! w !sudo tee % >/dev/null
 
-vnoremap ; :
-nnoremap ; :
+noremap j h
+noremap k j
+noremap l k
+noremap ; l
 
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
