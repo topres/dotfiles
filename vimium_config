@@ -1,0 +1,23 @@
+# Insert your preferred key mappings here
+
+map m LinkHints.activateMode
+map M LinkHints.activateModeToOpenInNewTab
+
+map e scrollDown
+map E nextTab
+
+map u scrollDown
+map U previousTab
+
+map i scrollRight
+map n scrollLeft
+
+map f goForward
+map b goBack
+
+map t enterInsertMode
+map h performFind
+map H performBackwardsFind
+
+# Characters used for link hints
+# arstdhneiolkpv
