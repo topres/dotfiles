@@ -6,7 +6,7 @@ endif
 
 set nocompatible
 
-
+# hello flotte fyr
 source $HOME/dotfiles/vim/config/plug.vim
 source $HOME/dotfiles/vim/config/ctrlp.vim
 source $HOME/dotfiles/vim/config/airlines.vim
