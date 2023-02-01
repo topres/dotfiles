@@ -1,9 +1,10 @@
 map m LinkHints.activateMode
 map M LinkHints.activateModeToOpenInNewTab
 
+map k scrollPageDown
 map e scrollDown
 map E nextTab
-
+map j scrollPageUp
 map u scrollUp
 map U previousTab
 
@@ -16,6 +17,3 @@ map b goBack
 map t enterInsertMode
 map h performFind
 map H performBackwardsFind
-
-# Characters used for link hints
-# arstdhneiolkpv
