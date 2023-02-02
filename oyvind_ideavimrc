@@ -1,0 +1,43 @@
+let mapleader = " "
+nnoremap <leader> <Nop>
+
+" Extend / Shrink selection
+nnoremap <leader>w :action EditorSelectWord<CR>
+vnoremap <leader>w :action EditorSelectWord<CR>
+nnoremap <leader>e :action EditorUnSelectWord<CR>
+vnoremap <leader>e :action EditorUnSelectWord<CR>
+
+map <leader>r :action RenameElement<CR>
+map gb :action ToggleLineBreakpoint<CR>
+map gd :action GotoDeclaration<CR>
+map gi :action GotoImplementation<CR>
+map gn :action GotoNextError<CR>
+map <leader>f :action FindInPath<CR>
+map <leader>i :source ~/.ideavimrc<CR>
+map <leader>n :action NewFile<CR>
+map <leader>s :action Stop<CR>
+map <leader>d :action Debug<CR>
+map <leader>g :action Run<CR>
+map <leader>t :action RerunTests<CR>
+map <leader>e :action ShowExecutionPoint<CR>
+map <leader>- :action SplitHorizontally<CR>
+map <leader>. :action SplitVertically<CR>
+map <leader>a :action Annotate<CR>
+map <leader><leader> :action ToggleDistractionFreeMode<CR>
+map <leader>l :action OpenEditorInOppositeTabGroup<CR>
+map <leader>b :action BuildSolutionAction<CR>
+map <leader>p :action Javascript.Linters.EsLint.Fix<CR>
+# Funker ikke heeelt i frontendkode den her
+map <leader>c :action CommentByLineComment<CR>
+map f :action AceAction<CR>
+map H _
+map L $
+nnoremap x :close<CR>
+nnoremap gc :action Javascript.Linters.EsLint.Fix
+set surround
+set multiple-cursors
+set commentary
+set ignorecase
+set number relativenumber
+set visualbell
+set noerrorbells
