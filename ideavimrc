@@ -1,0 +1,135 @@
+""" Editing and Reloading the Config
+let mapleader=","
+
+set clipboard+=unnamed
+set clipboard+=ideaput
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+set visualbell
+set noerrorbell
+
+""" Easymotion
+set easymotion
+map m <Plug>(easymotion-s)
+map <leader>e <Plug>(easymotion-j)
+map <leader>u <Plug>(easymotion-k)
+ 
+""" Navigation
+" Up/down/left/right
+nnoremap n h|xnoremap n h|onoremap n h|
+nnoremap u k|xnoremap u k|onoremap u k|
+nnoremap e j|xnoremap e j|onoremap e j|
+nnoremap i l|xnoremap i l|onoremap i l|
+
+" Beginning/end of line
+nnoremap L ^|xnoremap L ^|onoremap L ^|
+nnoremap Y $|xnoremap Y $|onoremap Y $|
+
+ " PageUp/PageDown
+nnoremap <c-e> <c-d>
+nnoremap j <c-u>
+nnoremap k <c-d>
+
+" Word left/right
+nnoremap l b|xnoremap l b|onoremap l b|
+nnoremap y w|xnoremap y w|onoremap y w|
+nnoremap <C-l> B|vnoremap <C-l> B|onoremap <C-l> B|
+nnoremap <C-y> W|vnoremap <C-y> W|onoremap <C-y> W|
+
+" End of word left/right
+nnoremap <silent> N ge|xnoremap <silent> N ge|onoremap N ge|
+nnoremap <silent> I e|xnoremap <silent> I e|onoremap I e|
+
+" Text too objects
+" diw is drw. daw is now dtw.
+onoremap r i
+vnoremap r i
+onoremap t a
+vnoremap t a
+
+" Move visual replace from 'r' to 'R'
+onoremap R r
+vnoremap R r
+
+" Copy/paste
+nnoremap c y|xnoremap c y|
+nnoremap v p|xnoremap v p|
+nnoremap C y$|xnoremap C y|
+nnoremap V P|xnoremap V P|
+nnoremap cc yy
+
+" Extend / Shrink selection
+nnoremap <space> :action EditorSelectWord<CR>
+vnoremap <space> :action EditorSelectWord<CR>
+nnoremap <s-space> :action EditorUnSelectWord<CR>
+vnoremap <s-space> :action EditorUnSelectWord<CR>
+
+" Undo/redo
+nnoremap b u
+nnoremap gb U|xnoremap gb U<C-u>undo<CR>|
+nnoremap B <C-r>|xnoremap B :<C-u>redo<CR>|
+
+" inSert/append (T)
+nnoremap s i|
+nnoremap S I|
+nnoremap t a|
+nnoremap T A|
+
+" Change
+nnoremap w c|xnoremap w c|
+nnoremap W C|xnoremap W C|
+nnoremap ww cc|
+
+" Visual mode
+nnoremap a v|xnoremap a v|
+nnoremap A V|xnoremap A V|
+
+" Insert in Visual mode
+vnoremap S I
+
+" Search
+nnoremap h n|xnoremap h n|onoremap h n|
+nnoremap H N|xnoremap H N|onoremap H N|
+
+" 'til
+nnoremap p t|xnoremap p T|onoremap p t|
+nnoremap P T|xnoremap P T|onoremap P T|
+
+" Macros (replay the macro recorded by qq)
+nnoremap Q @q|
+
+""" noremap h :action QuickImplementations<CR>
+""" nnoremap <leader>r :action Refactorings.QuickListPopupAction<CR>
+""" noremap e :action EditorNextWord<CR>
+""" noremap <s-e> :action EditorPreviousWord<CR>
+""" nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+
+""" set hls
+set incsearch
+""" map h <Plug>(incsearch-nohl-n)
+""" map H <Plug>(incsearch-nohl-N)
+
+""" set NERDTree
+""" set surround
+set easymotion
+set ideajoin 
+idearefactormode=keep
+
+""" Window 
+noremap <c-z> :action ToggleDistractionFreeMode \| set rnu \| set number \| action ActivateProjectToolWindow \| PreviousEditorTab<CR>
+""" noremap <leader>d :action ToggleDistractionFreeMode \| set rnu \| set number<CR> 
+noremap <leader>n :NERDTreeToggle<CR>
+""" nnoremap <c-j> <c-w>h
+""" nnoremap <c-;> <c-w>l
+""" nnoremap <TAB> :action PreviousTab<CR>
+""" nnoremap <s-TAB> :action NextTab<CR>
+
+" Leader binds
+nnoremap <leader>b :action Bookmarks<CR>
+
+""" Pressing Command-E twice limits to edited files
+set rnu
+set number
+
+command! breakk action ToggleLineBreakpoint 
