@@ -12,9 +12,16 @@ set noerrorbell
 """ Easymotion
 set easymotion
 map m <Plug>(easymotion-s)
+
+""" leader binds
 map <leader>e <Plug>(easymotion-j)
 map <leader>u <Plug>(easymotion-k)
- 
+
+map <leader>b :action BuildSolutionAction<CR>
+map <leader>re :action RenameElement<CR>
+map <leader>rr :action Refactorings.QuickListPopupAction<CR>
+map <leader>db :action ToggleLineBreakpoint<CR>
+
 """ Navigation
 " Up/down/left/right
 nnoremap n h|xnoremap n h|onoremap n h|
@@ -31,15 +38,18 @@ nnoremap <c-e> <c-d>
 nnoremap j <c-u>
 nnoremap k <c-d>
 
+map w [w
+
 " Word left/right
-nnoremap l b|xnoremap l b|onoremap l b|
-nnoremap y w|xnoremap y w|onoremap y w|
+nnoremap l [b|xnoremap l [b|onoremap l [b|
+nnoremap y ]w|xnoremap y ]w|onoremap y ]w|
 nnoremap <C-l> B|vnoremap <C-l> B|onoremap <C-l> B|
-nnoremap <C-y> W|vnoremap <C-y> W|onoremap <C-y> W|
+nnoremap <C-y> w|vnoremap <C-y> w|onoremap <C-y> w|
 
 " End of word left/right
 nnoremap <silent> N ge|xnoremap <silent> N ge|onoremap N ge|
-nnoremap <silent> I e|xnoremap <silent> I e|onoremap I e|
+nnoremap <silent> I w|xnoremap <silent> I w|onoremap I w|
+vnoremap <silent> I w
 
 " Text too objects
 " diw is drw. daw is now dtw.
@@ -116,20 +126,17 @@ set easymotion
 set ideajoin 
 idearefactormode=keep
 
-""" Window 
-noremap <c-z> :action ToggleDistractionFreeMode \| set rnu \| set number \| action ActivateProjectToolWindow \| PreviousEditorTab<CR>
-""" noremap <leader>d :action ToggleDistractionFreeMode \| set rnu \| set number<CR> 
-noremap <leader>n :NERDTreeToggle<CR>
 """ nnoremap <c-j> <c-w>h
 """ nnoremap <c-;> <c-w>l
 """ nnoremap <TAB> :action PreviousTab<CR>
 """ nnoremap <s-TAB> :action NextTab<CR>
 
-" Leader binds
-nnoremap <leader>b :action Bookmarks<CR>
+
+" nnoremap y :action EditorNextWord<CR>
+"noremap y :action EditorNextWord<CR>
+"noremap l :action EditorPreviousWord<CR>
+"noremap l :action EditorPreviousWord<CR>
 
 """ Pressing Command-E twice limits to edited files
 set rnu
 set number
-
-command! breakk action ToggleLineBreakpoint 
