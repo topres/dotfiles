@@ -3,14 +3,7 @@
     "key": "",
     "command": "workbench.action.quickOpenNavigatePreviousInFilePicker"
   },
-  {
-    "key": "cmd+shift+a",
-    "command": "workbench.action.showCommands"
-  },
-  {
-    "key": "cmd+shift+a",
-    "command": "workbench.action.showCommands"
-  },
+  { "key": "cmd+shift+a", "command": "workbench.action.showCommands" },
   {
     "key": "shift+ctrl+e",
     "command": "actions.findWithSelection"

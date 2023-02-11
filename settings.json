@@ -299,7 +299,7 @@
         ]
       },
       {
-        "key": "h",
+        "key": "V",
         "name": "Split Horizontal",
         "type": "command",
         "command": "workbench.action.splitEditorDown"
@@ -337,7 +337,7 @@
         "command": "editor.action.toggleMinimap"
       },
       {
-        "key": "n",
+        "key": "h",
         "name": "highlight",
         "type": "command",
         "command": "vscode-neovim.send",

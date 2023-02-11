@@ -36,11 +36,12 @@ command! -bang Only if <q-bang> == '!' | call <SID>closeOtherEditors() | else | 
 
 " set relativenumber = true
 
+nnoremap <silent> m :<C-u>call VSCodeNotify('findJump.activate')<CR>
 nnoremap <silent> <tab> :<C-u>call VSCodeNotify('workbench.action.nextEditorInGroup')<CR>
 nnoremap <silent> <s-tab> :<C-u>call VSCodeNotify('workbench.action.previousEditorInGroup')<CR>
 
 nnoremap <silent> <leader>p :<C-u>call VSCodeNotify('editor.action.showHover')<CR>
-nnoremap <silent> <leader>f = :<C-u>call VSCodeNotify('editor.toggleFold')<CR>
+nnoremap <silent> <leader>f :<C-u>call VSCodeNotify('editor.toggleFold')<CR>
 nnoremap <silent> <leader>b :<C-u>call VSCodeNotify('workbench.action.tasks.build')<CR>
 nnoremap <silent> <leader>re :<C-u>call VSCodeNotify('editor.action.rename')<CR>
 nnoremap <silent> <leader>rr :<C-u>call VSCodeNotify('editor.action.refactor')<CR>
