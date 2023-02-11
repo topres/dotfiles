@@ -250,9 +250,9 @@
           },
           {
             "key": "d",
-            "name": "Delete Branch",
+            "name": "Diff",
             "type": "command",
-            "command": "git.deleteBranch"
+            "command": "git.openChange"
           },
           {
             "key": "f",
@@ -451,9 +451,45 @@
       },
       {
         "key": "t",
-        "name": "Terminal...",
+        "name": "Tests && Tab nav",
         "type": "bindings",
         "bindings": [
+          {
+            "key": "i"
+            "name": "Right",
+            "type": "command",
+            "command": "workbench.action.navigateRight"
+          },
+          {
+            "key": "n"
+            "name": "Left",
+            "type": "command",
+            "command": "workbench.action.navigateLeft"
+          },
+          {
+            "key": "u"
+            "name": "Up",
+            "type": "command",
+            "command": "workbench.action.navigateUp"
+          },
+          {
+            "key": "e"
+            "name": "Down",
+            "type": "command",
+            "command": "workbench.action.navigateDown"
+          },
+          {
+            "key": "y"
+            "name": "Next Tab",
+            "type": "command",
+            "command": "workbench.action.nextEditorInGroup"
+          },
+          {
+            "key": "l"
+            "name": "Prev Tab",
+            "type": "command",
+            "command": "workbench.action.previousEditorInGroup"
+          },
           {
             "key": "t",
             "name": "Toggle Terminal",
