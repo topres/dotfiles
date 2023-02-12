@@ -36,7 +36,7 @@ command! -bang Only if <q-bang> == '!' | call <SID>closeOtherEditors() | else | 
 
 " set relativenumber = true
 
-" nnoremap <silent> m :<C-u>call VSCodeNotify('findJump.activate')<CR>
+nnoremap <silent> m :<C-u>call VSCodeNotify('extension.aceJump.multiChar')<CR>
 nnoremap <silent> <tab> :<C-u>call VSCodeNotify('workbench.action.nextEditorInGroup')<CR>
 nnoremap <silent> <s-tab> :<C-u>call VSCodeNotify('workbench.action.previousEditorInGroup')<CR>
 
