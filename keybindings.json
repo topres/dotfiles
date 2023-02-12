@@ -4,6 +4,8 @@
     "command": "workbench.action.quickOpenNavigatePreviousInFilePicker"
   },
   { "key": "cmd+shift+a", "command": "workbench.action.showCommands" },
+  { "key": "cmd+shift+,", "command": "workbench.action.openSettings2" },
+
   {
     "key": "shift+ctrl+e",
     "command": "actions.findWithSelection"
