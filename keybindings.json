@@ -6,14 +6,6 @@
   { "key": "cmd+shift+a", "command": "workbench.action.showCommands" },
   { "key": "cmd+shift+,", "command": "workbench.action.openSettings2" },
   {
-    "key": "ctrl+;",
-    "command": "extension.aceJump.multiChar"
-  },
-  {
-    "key": "shift+ctrl+e",
-    "command": "actions.findWithSelection"
-  },
-  {
     "key": "cmd+e",
     "command": "workbench.view.explorer"
   },
