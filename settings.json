@@ -7,6 +7,7 @@
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.darwin": "$HOME/.config/nvim/init.vim",
     "vscode-neovim.neovimInitVimPaths.linux": "$HOME/.config/nvim/init.vim",
+    "vscode-neovim.mouseSelectionStartVisualMode": false,
     "whichkey.sortOrder": "alphabetically",
     "whichkey.bindings": [
       {
@@ -22,16 +23,24 @@
         "command": "workbench.action.quickOpen"
       },
       {
-        "key": "r",
-        "name": "recent files",
+        "key": "ctrl+;",
+        "name": "Recent files",
         "type": "command",
-        "command": "workbench.action.openRecent"
+        "command": "extension.sayHello"
+      },
+      {
+        "key": "r",
+        "name": "Recent files",
+        "type": "command",
+        "command": "workbench.action.showAllEditors"
       },
       {
         "key": "/",
         "name": "comment",
         "type": "command",
-        "command": "editor.action.commentLine"
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && neovim.init && neovim.mode != visual",
+        "args": "<C-/>"
       },
       {
         "key": "q",
@@ -455,37 +464,37 @@
         "type": "bindings",
         "bindings": [
           {
-            "key": "i"
+            "key": "i",
             "name": "Right",
             "type": "command",
             "command": "workbench.action.navigateRight"
           },
           {
-            "key": "n"
+            "key": "n",
             "name": "Left",
             "type": "command",
             "command": "workbench.action.navigateLeft"
           },
           {
-            "key": "u"
+            "key": "u",
             "name": "Up",
             "type": "command",
             "command": "workbench.action.navigateUp"
           },
           {
-            "key": "e"
+            "key": "e",
             "name": "Down",
             "type": "command",
             "command": "workbench.action.navigateDown"
           },
           {
-            "key": "y"
+            "key": "y",
             "name": "Next Tab",
             "type": "command",
             "command": "workbench.action.nextEditorInGroup"
           },
           {
-            "key": "l"
+            "key": "l",
             "name": "Prev Tab",
             "type": "command",
             "command": "workbench.action.previousEditorInGroup"
@@ -668,7 +677,7 @@
     "leetcode.defaultLanguage": "javascript",
     "leetcode.hint.configWebviewMarkdown": false,
     "leetcode.hint.commentDescription": false,
-    "window.zoomLevel": 3,
+    "window.zoomLevel": 2,
     "window.menuBarVisibility": "toggle",
     "python.dataScience.alwaysTrustNotebooks": true,
     "python.condaPath": "$HOME/.miniconda/bin/conda",
@@ -774,12 +783,12 @@
       "terminal.ansiBrightMagenta": "#c678dd",
       "terminal.ansiBrightRed": "#e06c75",
       "terminal.ansiBrightWhite": "#ffffff",
-      "terminal.ansiBrightYellow": "#d19a66",
-      },
+      "terminal.ansiBrightYellow": "#d19a66"
+      }
     },
     "workbench.colorTheme": "Default Light+",
     "whichkey.bindingOverrides": [],
     "files.autoSave": "onFocusChange",
     "editor.minimap.enabled": false,
-    "whichkey.delay": 500,
+    "whichkey.delay": 500
   }

@@ -1,4 +1,20 @@
 source ~/.vimrc
+
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'asvetliakov/vim-easymotion' 
+NeoBundle 'machakann/vim-sandwich'
+
+call neobundle#end()
+
+
+filetype plugin indent on
+NeoBundleCheck
+
 " TODO there is a more contemporary version of this file
 "VSCode
 function! s:split(...) abort
@@ -34,11 +50,17 @@ command! -complete=file -nargs=? New call <SID>split('h', '__vscode_new__')
 command! -complete=file -nargs=? Vnew call <SID>split('v', '__vscode_new__')
 command! -bang Only if <q-bang> == '!' | call <SID>closeOtherEditors() | else | call VSCodeNotify('workbench.action.joinAllGroups') | endif
 
-" set relativenumber = true
-
-nnoremap <silent> m :<C-u>call VSCodeNotify('extension.aceJump.multiChar')<CR>
 nnoremap <silent> <tab> :<C-u>call VSCodeNotify('workbench.action.nextEditorInGroup')<CR>
 nnoremap <silent> <s-tab> :<C-u>call VSCodeNotify('workbench.action.previousEditorInGroup')<CR>
+
+noremap <silent> m :<C-u>call VSCodeNotify('extension.aceJump.multiChar')<CR>
+"map m <Plug>(easymotion-prefix)
+" s{char}{char} to move to {char}{char}
+"  let g:EasyMotion_do_mapping = 0
+"  let g:EasyMotion_smartcase = 1
+"  nmap s <Plug>(easymotion-j)
+"  nmap m <Plug>(easymotion-s2)
+"  nmap ; <Plug>(easymotion-overwin-f2)
 
 nnoremap <silent> <leader>p :<C-u>call VSCodeNotify('editor.action.showHover')<CR>
 nnoremap <silent> <leader>f :<C-u>call VSCodeNotify('editor.toggleFold')<CR>
@@ -78,9 +100,10 @@ xnoremap <silent> <C-h> :call VSCodeNotify('workbench.action.navigateLeft')<CR>
 nnoremap <silent> <C-l> :call VSCodeNotify('workbench.action.navigateRight')<CR>
 xnoremap <silent> <C-l> :call VSCodeNotify('workbench.action.navigateRight')<CR>
 
-" Bind C-/ to vscode commentary since calling from vscode produces double comments due to multiple cursors
-xnoremap <silent> <C-/> :call Comment()<CR>
-nnoremap <silent> <C-/> :call Comment()<CR>
+if exists('g:vscode')
+    xmap <C-/> <Plug>VSCodeCommentarygv
+    nmap <C-/> <Plug>VSCodeCommentaryLinegv
+endif
 
 nnoremap <silent> <C-w>_ :<C-u>call VSCodeNotify('workbench.action.toggleEditorWidths')<CR>
 

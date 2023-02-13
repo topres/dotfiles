@@ -11,7 +11,7 @@
   },
   {
     "key": "cmd+r",
-    "command": "workbench.action.openRecent"
+    "command": "workbench.action.showAllEditors"
   },
   {
     "key": "shift+ctrl+e",
@@ -205,5 +205,15 @@
     "key": "ctrl+-",
     "command": "-workbench.action.navigateBack",
     "when": "canNavigateBack"
+  },
+  {
+    "key": "cmd+/",
+    "command": "vscode-neovim.send",
+    "when": "editorTextFocus && neovim.init",
+    "args": "<C-/>"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "extension.sayHello"
   }
 ]

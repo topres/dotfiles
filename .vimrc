@@ -5,24 +5,33 @@ set incsearch
 
 set number
 set clipboard+=unnamed
-" let g:fsharp#fsautocomplete_command =
-"     \ [ 'fsautocomplete', '--adaptive-lsp-server-enabled' ]
 
-" let g:fsharp#linter = 1
-" let g:fsharp#unused_opens_analyzer = 1
-" let g:fsharp#unused_declarations_analyzer = 1
+let g:sandwich_no_default_key_mappings = 1
+silent! nmap <unique><silent> ,sd <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-query-a)
+silent! nmap <unique><silent> ,sr <Plug>(operator-sandwich-replace)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-query-a)
+silent! nmap <unique><silent> ,sdb <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
+silent! nmap <unique><silent> ,srb <Plug>(operator-sandwich-replace)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
+
+let g:operator_sandwich_no_default_key_mappings = 1
+" add
+silent! map <unique> ,sa <Plug>(operator-sandwich-add)
+" delete
+silent! xmap <unique> ,sd <Plug>(operator-sandwich-delete)
+" replace
+silent! xmap <unique> ,sr <Plug>(operator-sandwich-replace)
 
 " Up/down/left/right
 nnoremap n h|xnoremap n h|onoremap n h|
 nnoremap u k|xnoremap u k|onoremap u k|
 nnoremap e j|xnoremap e j|onoremap e j|vnoremap e j|
-nnoremap i l|xnoremap i l|onoremap i l|
+
+" temporarily deleted to regain i as inner in commands
+" nnoremap i l|xnoremap i l|onoremap i l|
+nnoremap i l|vnoremap i l|
 
 " Word left/right
 nnoremap l b|xnoremap l b|onoremap l b|
 nnoremap y e|xnoremap y e|onoremap y e|
-" nnoremap <C-l> B|vnoremap <C-l> B|onoremap <C-l> B|
-" nnoremap <C-y> w|vnoremap <C-y> w|onoremap <C-y> w|
 
 " Beginning/end of line
 nnoremap L ^|xnoremap L ^|onoremap L ^|
@@ -41,9 +50,8 @@ vnoremap <silent> I w
 " diw is drw. daw is now dtw.
 onoremap r i
 vnoremap r i
-onoremap t a
-vnoremap t a
-
+"  onoremap t a
+"  vnoremap t a
 " Move visual replace from 'r' to 'R'
 onoremap R r
 vnoremap R r
@@ -83,8 +91,10 @@ nnoremap h n|xnoremap h n|onoremap h n|
 nnoremap H N|xnoremap H N|onoremap H N|
 
 " 'til
-nnoremap p t|xnoremap p T|onoremap p t|
+nnoremap p t|xnoremap p t|onoremap p t|
 nnoremap P T|xnoremap P T|onoremap P T|
 
 " Macros (replay the macro recorded by qq)
 nnoremap Q @q|
+
+" Macros (replay the macro recorded by qq)
