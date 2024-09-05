@@ -17,3 +17,5 @@ map b goBack
 map t enterInsertMode
 map h performFind
 map H performBackwardsFind
+
+# Characters used for link hints: tnserimgfupl
